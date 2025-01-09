@@ -19,29 +19,29 @@ Here's an example of how to install the [FFMpegCore](https://www.nuget.org/packa
 ```C#
 private static bool InstallFFMpegCore()
 {
-	var packages = new (string packageId, string version)[]
-	{
-		("System.Runtime.CompilerServices.Unsafe", "6.0.0"),
-		("Microsoft.Bcl.AsyncInterfaces", "7.0.0"),
-		("System.Text.Encodings.Web", "7.0.0"),
-		("System.Text.Json", "7.0.2"),
-		("Instances", "3.0.0"),
-		("FFMpegCore", "5.1.0"),
-	};
-	
-	try
-	{
+    var packages = new (string packageId, string version)[]
+    {
+        ("System.Runtime.CompilerServices.Unsafe", "6.0.0"),
+        ("Microsoft.Bcl.AsyncInterfaces", "7.0.0"),
+        ("System.Text.Encodings.Web", "7.0.0"),
+        ("System.Text.Json", "7.0.2"),
+        ("Instances", "3.0.0"),
+        ("FFMpegCore", "5.1.0"),
+    };
+    
+    try
+    {
         foreach (var (packageId, version) in packages)
         {
             NuGetPackageInstaller.InstallNuGetEditorPackage(packageId, version, isEditorOnly: true, refreshAfterInstall: false);
         }
-		AssetDatabase.Refresh();
-		return true;
-	}
-	catch (Exception e)
-	{
-		Debug.LogError("Error while installing FFMpegCore: " + e);
-		return false;
-	}
+        AssetDatabase.Refresh();
+        return true;
+    }
+    catch (Exception e)
+    {
+        Debug.LogError("Error while installing FFMpegCore: " + e);
+        return false;
+    }
 }
 ```
