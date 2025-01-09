@@ -1,6 +1,6 @@
 # NuGet Package Installer for Unity
 
-A minimal script to install NuGet packages into a Unity project. 
+A minimal script to install [NuGet](https://www.nuget.org/) packages into a [Unity](https://unity.com/products/unity-engine) project. 
 It does not automatically download dependencies, allowing you to choose which packages and dependencies to install.
 
 If you need a more feature-rich solution with a user interface, 
